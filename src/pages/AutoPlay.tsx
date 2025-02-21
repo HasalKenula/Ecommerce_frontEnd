@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Cat from '../assets/PlayStation_Controller.jpg'
+import PlayStation_Controller from '../assets/PlayStation_Controller.jpg'
 import Phone from '../assets/Phone.jpg'
 import Watch from '../assets/Watch.jpg'
 import Headphones from '../assets/Headphones.jpg'
@@ -35,15 +35,12 @@ export default function Auto() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide> <img src={Cat} alt="Slide 1" /></SwiperSlide>
+        <SwiperSlide> <img src={PlayStation_Controller} alt="Slide 1" /></SwiperSlide>
         <SwiperSlide> <img src={Phone} alt="Slide 1" /></SwiperSlide>
         <SwiperSlide> <img src={Watch} alt="Slide 1" /></SwiperSlide>
         <SwiperSlide><img src={Headphones} alt="Slide 1" /></SwiperSlide>
         <SwiperSlide><img src={Tablet} alt="Slide 1" /> </SwiperSlide>
         <SwiperSlide> <img src={Laptop} alt="Slide 1" /></SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
       </Swiper>
     </>
   );
