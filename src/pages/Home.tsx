@@ -5,6 +5,7 @@ import Button from "./Button";
 
 import Auto from "./AutoPlay";
 import SellingCategory from "./SellingCategory";
+import Footer from "./Footer";
 
 function Home() {
     const { logout } = useAuth();
@@ -42,15 +43,15 @@ function Home() {
 
             </div>
 
-            
-               <div className="m-24 bg-blue-300">
-               <SellingCategory />
-               </div>
 
-               <div className="w-full lg:h-[700px] bg-yellow-300 flex flex-col lg:flex-row md:h-[1320px] h-[850px]">
-                    ww
-               </div>
-            
+            <div className="m-24 bg-blue-300">
+                <SellingCategory />
+            </div>
+
+            <div className="w-full lg:h-[700px] bg-yellow-300 flex flex-col lg:flex-row md:h-[1320px] h-[850px]">
+                ww
+            </div>
+
 
             <div>
                 <Link to="/category" className="bg-gray-800 text-white px-5 py-2 me-3">Category</Link>
@@ -59,6 +60,10 @@ function Home() {
                 <Link to="/stock" className="bg-gray-800 text-white px-5 py-2 me-3">Stock</Link>
                 <Link to="/profile" className="bg-gray-800 text-white px-5 py-2 me-3">Setting</Link> */}
                 <button className="bg-gray-800 text-white px-5 py-2 me-3" onClick={logout}>Logout</button>
+            </div>
+
+            <div>
+                <Footer />
             </div>
 
         </div>
