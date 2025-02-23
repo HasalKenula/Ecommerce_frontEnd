@@ -14,7 +14,7 @@ function SellingCategory() {
 
                             <img src={Laptop2} className='w-2/3 h-2/3 object-cover  ' />
 
-                            <button className='w-4/8  rounded-xl bg-blue-400 text-white m-8 p-[12px]'>Laptops</button>
+                            <button className='w-4/8  rounded-xl bg-purple-400 text-white m-8 p-[12px]'>Laptops</button>
 
 
                         </div>
@@ -24,7 +24,7 @@ function SellingCategory() {
 
                             <img src={Headphone2} className='w-2/3 h-2/3 object-cover  ' />
 
-                            <button className='w-4/8  rounded-xl bg-blue-400 text-white m-8 p-[12px]'>Headphones</button>
+                            <button className='w-4/8  rounded-xl bg-purple-400 text-white m-8 p-[12px]'>Headphones</button>
 
 
                         </div>
@@ -34,7 +34,7 @@ function SellingCategory() {
 
                             <img src={Iphone} className='w-2/3 h-2/3 object-cover  ' />
 
-                            <button className='w-4/8  rounded-xl bg-blue-400 text-white m-8 p-[12px]'>iPhones</button>
+                            <button className='w-4/8  rounded-xl bg-purple-400 text-white m-8 p-[12px]'>iPhones</button>
 
 
                         </div>
@@ -51,7 +51,7 @@ function SellingCategory() {
 
                             <img src={Playstation} className='w-2/3 h-2/3 object-cover  ' />
 
-                            <button className='w-4/8  rounded-xl bg-blue-400 text-white m-8 p-[12px]'>Playstation</button>
+                            <button className='w-4/8  rounded-xl bg-purple-400 text-white m-8 p-[12px]'>Playstation</button>
 
 
                         </div>
@@ -61,7 +61,7 @@ function SellingCategory() {
 
                             <img src={Tablets2} className='w-2/3 h-2/3 object-cover  ' />
 
-                            <button className='w-4/8  rounded-xl bg-blue-400 text-white m-8 p-[12px]'>Tablets </button>
+                            <button className='w-4/8  rounded-xl bg-purple-400 text-white m-8 p-[12px]'>Tablets </button>
 
 
                         </div>
@@ -71,7 +71,7 @@ function SellingCategory() {
 
                             <img src={AppleWatch2} className='w-2/3 h-2/3 object-cover  ' />
 
-                            <button className='w-4/8  rounded-xl bg-blue-400 text-white m-8 p-[12px]'>Apple Watches</button>
+                            <button className='w-4/8  rounded-xl bg-purple-400 text-white m-8 p-[12px]'>Apple Watches</button>
 
 
                         </div>
