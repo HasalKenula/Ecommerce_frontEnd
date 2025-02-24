@@ -6,6 +6,7 @@ import Button from "./Button";
 import Auto from "./AutoPlay";
 import SellingCategory from "./SellingCategory";
 import Footer from "./Footer";
+import ProductsAbout from "./ProductsAbout";
 
 function Home() {
     const { logout } = useAuth();
@@ -48,8 +49,8 @@ function Home() {
                 <SellingCategory />
             </div>
 
-            <div className="w-full lg:h-[700px] bg-yellow-300 flex flex-col lg:flex-row md:h-[1320px] h-[850px]">
-                ww
+            <div>
+                <ProductsAbout />
             </div>
 
 
@@ -65,6 +66,8 @@ function Home() {
             <div>
                 <Footer />
             </div>
+
+           
 
         </div>
     )
