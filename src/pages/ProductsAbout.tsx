@@ -3,7 +3,7 @@ import Button from "./Button";
 function ProductsAbout(){
     return(
         <div>
-             <div className="w-full lg:h-[700px] bg-green-300 flex flex-col lg:flex-row md:h-[1320px] h-[850px]">
+             <div className="w-full lg:h-[700px] bg-yellow-300 flex flex-col lg:flex-row md:h-[1320px] h-[850px]">
                 <div className="lg:w-1/2 bg-blue-300 lg:mt-[24px] lg:mb-[24px] lg:ml-[24px] flex  justify-center items-center ">
                     <div className=" flex  flex-col justify-center items-center   p-[6px]">
                         <div className="md:text-6xl text-4xl font-bold mt-[24px] ">

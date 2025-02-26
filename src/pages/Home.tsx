@@ -45,7 +45,7 @@ function Home() {
             </div>
 
 
-            <div className="m-24 bg-blue-300">
+            <div className="lg:m-24 bg-blue-300">
                 <SellingCategory />
             </div>
 
