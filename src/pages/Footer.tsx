@@ -11,6 +11,7 @@ function Footer() {
                         <img src={Cat} className="h-[200px] w-[200px]" />
                     </div>
                     footer
+                    A grayscale image with pixel values ranging from 0 to 255 can have
                 </div>
             </div>
         </div>
