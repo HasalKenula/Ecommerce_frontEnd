@@ -28,6 +28,9 @@ function ProductsAbout() {
                 <div className="lg:w-1/2 bg-yellow-300 lg:mt-[24px] lg:mb-[24px] lg:mr-[24px]">
                     <div >
                         <img src={Cat} className="h-[200px] w-[200px]" />
+                        <div className="text-white">
+                            A grayscale image with pixel values ranging from 0 to 255 can have
+                        </div>
                     </div>
                 </div>
 
