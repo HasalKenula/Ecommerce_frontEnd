@@ -8,6 +8,8 @@ import SellingCategory from "./SellingCategory";
 import Footer from "./Footer";
 import ProductsAbout from "./ProductsAbout";
 
+
+
 function Home() {
     const { logout } = useAuth();
     return (
@@ -46,7 +48,8 @@ function Home() {
 
 
             <div className="lg:m-24 bg-blue-300">
-                <SellingCategory />
+                 <SellingCategory /> 
+                
             </div>
 
             <div>
