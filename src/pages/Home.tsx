@@ -7,6 +7,8 @@ import Auto from "./AutoPlay";
 import SellingCategory from "./SellingCategory";
 import Footer from "./Footer";
 import ProductsAbout from "./ProductsAbout";
+import Deals from "./Deals";
+import NavigationBar from "./NavigationBar";
 
 
 
@@ -16,7 +18,7 @@ function Home() {
 
         <div>
             <div>
-                <Navbar />
+                <NavigationBar />
             </div>
             <div className="w-full lg:h-[700px] bg-green-300 flex flex-col lg:flex-row md:h-[1320px] h-[850px]">
                 <div className="lg:w-1/2 bg-blue-300 lg:mt-[24px] lg:mb-[24px] lg:ml-[24px] flex  justify-center items-center ">
@@ -54,6 +56,10 @@ function Home() {
 
             <div>
                 <ProductsAbout />
+            </div>
+
+            <div>
+                <Deals />
             </div>
 
 
