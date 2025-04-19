@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import ProductsAbout from "./ProductsAbout";
 import Deals from "./Deals";
 import NavigationBar from "./NavigationBar";
+import ProductFilter from "./ProductFilter";
 
 
 
@@ -60,6 +61,10 @@ function Home() {
 
             <div>
                 <Deals />
+            </div>
+
+            <div>
+                <ProductFilter />
             </div>
 
 
