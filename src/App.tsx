@@ -9,6 +9,7 @@ import { AuthProvider } from './context/AuthContext'
 import Home from './pages/Home'
 import ProtectedRoute from './components/ProtectedRoute'
 import Student from './pages/Student'
+import ProductFilter from './pages/ProductFilter'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
             <Route path="/category" element={<Category />} />
             <Route path="/student" element={<Student />} />
             <Route path="/" element={<Home />} />
+            <Route path="/gagets" element={<ProductFilter/>}/>
           </Route>
           <Route path='/auth/login' element={<Login />} />
         </Routes>
