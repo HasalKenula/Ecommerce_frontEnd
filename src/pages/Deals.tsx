@@ -22,7 +22,7 @@ function Deals() {
 
             </div>
 
-            <div className="bg-yellow-300 lg:w-1/2  lg:mt-[24px] lg:mb-[24px] lg:mr-[24px]">
+            <div className="bg-red-300 lg:w-1/2  lg:mt-[24px] lg:mb-[24px] lg:mr-[24px]">
                <img src={VRMan}/>
             </div>
 
