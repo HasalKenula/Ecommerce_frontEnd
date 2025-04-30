@@ -1,83 +1,81 @@
-
-import im1 from "../assec/AppleWatch2.png";
-import im2 from "../assec/Headphone2.jpg";
-import im3 from "../assec/Iphone.png";
-import im4 from "../assec/Laptop2.png";
-import im5 from "../assec/PlayStation.png";
-import im6 from "../assec/Tablet2.jpg";
+import { AiFillStar } from "react-icons/ai";
+import im1 from "../../assets/AppleWatch2.png";
+import im2 from "../../assets/Headphone2.png";
+import im3 from "../../assets/Iphone.png";
+import im4 from "../../assets/Laptop2.png";
+import im5 from "../../assets/PlayStation.png";
+import im6 from "../../assets/Tablet2.png";
 
 const Data = [
   {
     img:im1 ,
-    title: "Nike Air Monarch IV",
-    
+    title: "Watches",
+    star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
-    company: "Nike",
-    color: "white",
-    category: "sneakers",
+    company: "Apple",
+    color: "black",
+    category: "flats",
   },
   {
     img: im2,
-    title: "Nike Air Vapormax Plus",
-   
+    title: "Headpones",
+    star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
-    company: "Nike",
-    color: "red",
-    category: "sneakers",
+    company: "HP",
+    color: "black",
+    category: "flats",
   },
 
   {
     img:im3,
-    title: "Nike Waffle One Sneaker",
-   
+    title: "Iphone",
+    star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
-    company: "Nike",
-    color: "green",
-    category: "sneakers",
+    company: "Apple",
+    color: "black",
+    category: "flats",
   },
   {
     img: im4,
-    title: "Nike Running Shoe",
-    
+    title: "Laptops",
+    star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
-    company: "Adidas",
+    company: "Hp",
     color: "black",
-    category: "sneakers",
+    category: "flats",
   },
   {
     img: im5,
-    title: "Flat Slip On Pumps",
-    
+    title: "Playstation",
+    star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
-    company: "Vans",
-    color: "green",
+    company: "Sony",
+    color: "white",
     category: "flats",
   },
   {
     img: im6,
-    title: "Knit Ballet Flat",
-   
+    title: "Tablets",
+    star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "50",
-    company: "Adidas",
-    color: "black",
+    company: "Apple",
+    color: "white",
     category: "flats",
   },
 
   
-  
- 
 
  
 ];

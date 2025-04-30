@@ -10,6 +10,8 @@ import Home from './pages/Home'
 import ProtectedRoute from './components/ProtectedRoute'
 import Student from './pages/Student'
 import ProductFilter from './pages/ProductFilter'
+import TotalPrice from './pages/TotalPrice'
+import { CartProvider } from './components/CartContext'
 
 function App() {
 
@@ -17,6 +19,7 @@ function App() {
   return (
 
     <AuthProvider>
+       <CartProvider>
       <BrowserRouter>
         <Routes>
           {/*Protected routes - need login to access */}
@@ -29,11 +32,13 @@ function App() {
             <Route path="/student" element={<Student />} />
             <Route path="/" element={<Home />} />
             <Route path="/gagets" element={<ProductFilter/>}/>
+            <Route path="/product" element={<TotalPrice />} />
           </Route>
           <Route path='/auth/login' element={<Login />} />
         </Routes>
 
       </BrowserRouter>
+      </CartProvider>
     </AuthProvider>
 
   )

@@ -63,9 +63,9 @@ function Home() {
                 <Deals />
             </div>
 
-            <div>
+            {/* <div>
                 <ProductFilter />
-            </div>
+            </div> */}
 
 
             <div>

@@ -18,28 +18,22 @@ function Category({ handleChange }:props) {
         </label>
         <Input
           handleChange={handleChange}
-          value="laptops"
+          value="Laptops"
           title="Laptops"
           name="test"
           
         />
+       
         <Input
           handleChange={handleChange}
-          value="watches"
-          title="Watches"
-          name="test"
-         
-        />
-        <Input
-          handleChange={handleChange}
-          value="headpones"
+          value="Headpones"
           title="Headpones"
           name="test"
         
         />
         <Input
           handleChange={handleChange}
-          value="playstation"
+          value="Playstation"
           title="Playstation"
           name="test"
          
@@ -47,7 +41,7 @@ function Category({ handleChange }:props) {
 
         <Input
           handleChange={handleChange}
-          value="tablets"
+          value="Tablets"
           title="Tablets"
           name="test"
          
@@ -55,7 +49,7 @@ function Category({ handleChange }:props) {
 
         <Input
           handleChange={handleChange}
-          value="iphone"
+          value="Iphone"
           title="Iphone"
           name="test"
          

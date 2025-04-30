@@ -1,5 +1,6 @@
 import Category from "./categories/Categories";
 import Colors from "./colors/Colors";
+import Price from "./prices/Prices";
 import "./Sidebar.css";
 
 type Props = {
@@ -14,6 +15,7 @@ const Sidebar = ({ handleChange }:Props) => {
           {/* <h1>--</h1> */}
         </div>
         <Category handleChange={handleChange} />
+        <Price handleChange={handleChange} />
         <Colors handleChange={handleChange} />
       </div>
     </>
