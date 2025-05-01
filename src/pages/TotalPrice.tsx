@@ -1,8 +1,8 @@
-import { useCart } from "../components/CartContext";
+import { useCart} from "../components/CartContext";
 import "./ArtCard.css";
 
 const ProductPage = () => {
-  const { cart } = useCart();
+  const { cart,removeFromCart } = useCart();
 
   const getTotal = () => {
     return cart.reduce((sum, item) => {
@@ -12,7 +12,7 @@ const ProductPage = () => {
   };
 
   return (
-    <div className="cart-container">
+    <div className="cart-container ">
       <h1>Your Cart</h1>
 
       {cart.length === 0 ? (
@@ -25,6 +25,7 @@ const ProductPage = () => {
               <th>Image</th>
               <th>Product Name</th>
               <th>Price</th>
+              <th>Action</th> {/* New column */}
             </tr>
           </thead>
           <tbody>
@@ -36,10 +37,13 @@ const ProductPage = () => {
                 </td>
                 <td>{item.name}</td>
                 <td>{item.price}</td>
+                <td>
+                  <button onClick={() => removeFromCart(index)}>Delete</button>
+                </td>
               </tr>
             ))}
             <tr className="total-row">
-              <td colSpan={3}>Total</td>
+              <td colSpan={4}>Total</td>
               <td>${getTotal()}</td>
             </tr>
           </tbody>

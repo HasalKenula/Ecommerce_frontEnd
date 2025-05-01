@@ -2,6 +2,14 @@
     padding: 2rem;
     font-family: Arial, sans-serif;
   }
+
+  @media(max-width:768px){
+    .cart-container {
+      padding: 0rem;
+      font-family: Arial, sans-serif;
+    }
+  
+  }
   
   h1 {
     margin-bottom: 1rem;
