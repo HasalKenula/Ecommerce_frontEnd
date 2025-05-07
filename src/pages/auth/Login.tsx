@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useAuth } from "../../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
 
@@ -59,6 +59,12 @@ function Login() {
 
                     <div className="mt-8">
                         <button type="submit" className="bg-gray-800 text-white px-4 py-2 rounded-lg w-full hover:bg-gray-950">Login</button>
+                    </div>
+
+                    <div className="mb-3">
+                    
+                        <Link to="/register"  className="w-full rounded-lg px-4 py-2 bg-gray-800 text-white hover:bg-gray-950 ">Register</Link>
+
                     </div>
 
                 </form>

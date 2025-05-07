@@ -1,15 +1,45 @@
+import { useEffect, useState } from "react";
 import { useCart} from "../components/CartContext";
 import "./ArtCard.css";
-
+import axios from "axios";
+import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 const ProductPage = () => {
+  const {isAuthenticated,jwtToken}=useAuth();
   const { cart,removeFromCart } = useCart();
+  const[totalPrice,setTotalPrice]=useState<number>();
 
-  const getTotal = () => {
-    return cart.reduce((sum, item) => {
+  const config={
+    headers: {
+        Authorization: `Bearer ${jwtToken}`
+    }
+  }
+
+  async function addPayement() {
+    await axios.post("http://localhost:8081/orders",{
+      totalPrice:totalPrice
+      
+    },config);
+    navigate("/orders");
+  }
+
+  const navigate = useNavigate();
+
+
+  // const getTotal = () => {
+  //   return cart.reduce((sum, item) => {
+  //     const price = parseFloat(item.price.replace("$", ""));
+  //     return sum + price;
+  //   }, 0).toFixed(2);
+  // };
+
+  useEffect(() => {
+    const total = cart.reduce((sum, item) => {
       const price = parseFloat(item.price.replace("$", ""));
       return sum + price;
-    }, 0).toFixed(2);
-  };
+    }, 0);
+    setTotalPrice(parseFloat(total.toFixed(2)));
+  }, [cart,isAuthenticated]);
 
   return (
     <div className="cart-container ">
@@ -43,8 +73,12 @@ const ProductPage = () => {
               </tr>
             ))}
             <tr className="total-row">
-              <td colSpan={4}>Total</td>
-              <td>${getTotal()}</td>
+              <td colSpan={3}>Total</td>
+              <td>
+                  <button onClick={() => addPayement()}>Payement</button>
+              </td>
+              {/* <td>${getTotal()}</td> */}
+              <td>${totalPrice?.toFixed(2) ?? "0.00"}</td>
             </tr>
           </tbody>
         </table>

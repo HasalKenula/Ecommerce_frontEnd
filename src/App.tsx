@@ -12,6 +12,8 @@ import Student from './pages/Student'
 import ProductFilter from './pages/ProductFilter'
 import TotalPrice from './pages/TotalPrice'
 import { CartProvider } from './components/CartContext'
+import Orders from './pages/Orders'
+import Register from './pages/Register'
 
 function App() {
 
@@ -33,8 +35,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/gagets" element={<ProductFilter/>}/>
             <Route path="/product" element={<TotalPrice />} />
+            <Route path="/orders" element={<Orders />} />
           </Route>
           <Route path='/auth/login' element={<Login />} />
+          <Route path='/register' element={<Register/>}/>
         </Routes>
 
       </BrowserRouter>
