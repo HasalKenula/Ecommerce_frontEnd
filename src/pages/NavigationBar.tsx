@@ -97,7 +97,7 @@ const NavigationBar = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <nav className="bg-purple-500 shadow-md sticky top-0 z-50 font-medium">
+    <nav className="bg-gradient-to-r from-purple-500 to-pink-500 shadow-md sticky top-0 z-50 font-medium">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold text-blue-600">MyLogo</div>

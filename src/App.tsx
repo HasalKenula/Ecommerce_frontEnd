@@ -15,7 +15,9 @@ import { CartProvider } from './components/CartContext'
 import Orders from './pages/Orders'
 import Register from './pages/Register'
 import About from './pages/About'
-
+import Contact from './pages/Contact'
+import ProfileData from './pages/ProfileData'
+import ProfileTable from './pages/ProfileTable'
 function App() {
 
 
@@ -38,6 +40,9 @@ function App() {
             <Route path="/product" element={<TotalPrice />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/about" element={<About/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+            <Route path="/profile" element={<ProfileData/>}/>
+            <Route path="/profiletable" element={<ProfileTable/>}/>
           </Route>
           <Route path='/auth/login' element={<Login />} />
           <Route path='/register' element={<Register/>}/>
