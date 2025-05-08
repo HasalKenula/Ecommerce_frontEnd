@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react';
 import Tab from '../assets/AppleAir.png';
 function Footer() {
     return (
-        <div className="flex flex-col justify-center items-center w-full lg:h-[550px] h-[1450px] md:h-[1500px] m-auto bg-opacity-90 bg-black">
+        <div className="flex flex-col  justify-center items-center w-full lg:h-[550px] h-[1510px] md:h-[1750px] m-auto bg-opacity-90 bg-black">
 
 
 
@@ -12,11 +12,11 @@ function Footer() {
             <div className="lg:flex lg:flex-row  flex-col w-full flex-bg-blue-400 lg:h-2/3 lg:m-0 lg:flex-nowrap flex-wrap text-white text-sm">
                 <div className="lg:w-1/4 p-4   lg:mr-8  rounded-3xl lg:ml-10 mt-5 md:w-4/6 lg:m-0 m-auto lg:border-0 border-slate-500 border-b-4 ">
 
-                    <div className="flex font-bold justify-center m-2 text-slate-500 lg:mb-8">
+                    <div className="flex font-bold justify-center m-2 text-slate-500 lg:mb-8 md:text-xl">
                         About
 
                     </div>
-                    <div className="flex font-bold justify-center  text-blue-400">
+                    <div className="flex font-bold justify-center  text-blue-400 md:text-xl ">
                         XPress
 
                     </div>
@@ -24,7 +24,7 @@ function Footer() {
                         Gagets
 
                     </div>
-                    <div className="flex justify-center m-2 lg:leading-4 lg:mt-8 text-sm text-center">
+                    <div className="flex justify-center m-2 lg:leading-4 lg:mt-8 text-sm text-center md:text-xl lg:text-base">
                         <p> Welcome to XPress - your one-stop destination for fast, reliable, and affordable online shopping. At XPress, we're dedicated to delivering a seamless shopping experience with a wide range of quality products, from electronics and fashion to home essentials and more. With a focus on customer satisfaction and speedy delivery, we make shopping easier, quicker, and smarter. Experience the joy of shopping with XPress - where everything you need is just a click away!</p>
                     </div>
 
@@ -33,11 +33,11 @@ function Footer() {
 
                 <div className="lg:w-1/4 p-4  lg:mr-8  lg:ml-8 rounded-3xl lg:m-0 mt-5 md:w-4/6 m-auto lg:border-0 border-slate-500 border-b-4">
 
-                    <div className="flex font-bold justify-center text-slate-500  m-2 mb-3">
+                    <div className="flex font-bold justify-center text-slate-500  m-2 mb-3 md:text-xl">
                         Navigation Links
                     </div>
-                    <div className="flex flex-col items-start items-center m-2">
-                        <div className='mb-12'>
+                    <div className="flex flex-col items-start items-center m-2 md:text-xl lg:text-base">
+                        <div className='mb-12 '>
                             Home
                         </div>
                         <div className='mb-12'>
@@ -56,10 +56,10 @@ function Footer() {
 
                 <div className="lg:w-1/4 p-4 lg:mr-8  lg:ml-8 rounded-3xl lg:m-0 mt-5 md:w-4/6 m-auto lg:border-0 border-slate-500 border-b-4">
 
-                    <div className="flex font-bold justify-center text-slate-500 m-2 mb-3">
+                    <div className="flex font-bold justify-center text-slate-500 m-2 mb-3 md:text-xl">
                         Contact
                     </div>
-                    <div className="flex flex-col items-start items-center m-2">
+                    <div className="flex flex-col items-start items-center m-2 md:text-xl lg:text-base">
                         <div className='flex flex-col  items-start items-center gap-4'>
 
                             <Icon icon="material-symbols:location-on-outline" width="30px" height="30px" color="#60a5fa" />
@@ -106,10 +106,10 @@ function Footer() {
 
                 <div className="lg:w-1/4 p-4  lg:mr-8  lg:ml-8 rounded-3xl lg:m-0 mt-5 md:w-4/6 m-auto lg:border-0 border-slate-500 border-b-4">
 
-                    <div className="flex font-bold justify-center text-slate-500  m-2 mb-3">
+                    <div className="flex font-bold justify-center text-slate-500  m-2 mb-3 md:text-xl">
                        Services
                     </div>
-                    <div className="flex flex-col items-start items-center m-2">
+                    <div className="flex flex-col items-start items-center m-2 md:text-xl lg:text-base">
                         <div className='mb-12'>
                             Products
                         </div>

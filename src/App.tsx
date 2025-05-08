@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import { useState } from 'react'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Category from './pages/Category'
@@ -14,6 +14,7 @@ import TotalPrice from './pages/TotalPrice'
 import { CartProvider } from './components/CartContext'
 import Orders from './pages/Orders'
 import Register from './pages/Register'
+import About from './pages/About'
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
             <Route path="/gagets" element={<ProductFilter/>}/>
             <Route path="/product" element={<TotalPrice />} />
             <Route path="/orders" element={<Orders />} />
+            <Route path="/about" element={<About/>}/>
           </Route>
           <Route path='/auth/login' element={<Login />} />
           <Route path='/register' element={<Register/>}/>
