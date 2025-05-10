@@ -1,11 +1,11 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import NavigationBar from "./NavigationBar";
 import Footer from "./Footer";
 import Profile from "../assets/Profile.png";
 import { useAuth } from "../context/AuthContext";
 function ProfileData() {
-    const {isAuthenticated,jwtToken}=useAuth();
+    const { isAuthenticated, jwtToken } = useAuth();
 
     const [fullName, setFullName] = useState<string>("");
     const [subName, setSubName] = useState<string>("");
@@ -13,33 +13,33 @@ function ProfileData() {
     const [email, setEmail] = useState<string>("");
     const [contact, setContact] = useState<string>("");
 
-    const config={
+    const config = {
         headers: {
             Authorization: `Bearer ${jwtToken}`
         }
-       }
+    }
 
-   
+
 
     async function send() {
         await axios.post("http://localhost:8081/profile", {
             fullName: fullName,
-            subName:subName,
+            subName: subName,
             address: address,
             email: email,
             contact: contact
-        },config);
+        }, config);
         setFullName("");
         setSubName("");
         setAddress("");
         setEmail("");
         setContact("");
-        alert("your contact is successful")
+        alert("your are successful")
     }
 
     useEffect(function () {
-       
-    },[isAuthenticated])
+
+    }, [isAuthenticated])
 
 
     function handleFullName(event: any) {
@@ -69,7 +69,7 @@ function ProfileData() {
 
         <div>
 
-<div>
+            <div>
                 <NavigationBar />
             </div>
             <div className="bg-white-300 lg:flex justify-center items-center w-full lg:h-[700px] md:h-[1150px] h-[900px] m-auto  aligns-items ">
@@ -80,12 +80,12 @@ function ProfileData() {
 
 
                     <div className="md:text-6xl text-4xl font-bold mt-[24px]  text-center">
-                       Fill your <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  font-bold">Profile</span>
+                        Fill your <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  font-bold">Profile</span>
 
                     </div>
-                    
-                    <div  className=' flex justify-center items-center pt-4 sm:pt-8 md:pt-12 lg:pt-8'>
-                    <img src={Profile} className="w-32 sm:w-48 md:w-64 lg:w-60 rounded-full "/>
+
+                    <div className=' flex justify-center items-center pt-4 sm:pt-8 md:pt-12 lg:pt-8'>
+                        <img src={Profile} className="w-32 sm:w-48 md:w-64 lg:w-60 rounded-full " />
                     </div>
                     <div className="md:m-24 0 24 32 m-12 0 12 8 md:text-xl text-center">
                         Please fill your profile,

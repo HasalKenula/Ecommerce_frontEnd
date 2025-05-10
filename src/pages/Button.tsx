@@ -1,11 +1,10 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const Button = () => {
   return (
     <StyledWrapper>
       <div className="btn-conteiner">
-        <a className="btn-content" href="#">
+        <a className="btn-content"  href="/gagets">
           <span className="btn-title">Explore Now</span>
           <span className="icon-arrow">
             <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -26,9 +25,9 @@ const StyledWrapper = styled.div`
   .btn-conteiner {
     display: flex;
     justify-content: center;
-    --color-text: #ffffff;
-    --color-background: #ff135a;
-    --color-outline: #ff145b80;
+    --color-text: #ffffff; 
+    --color-background: #7e22ce;
+    --color-outline: #ec4899;
     --color-shadow: #00000080;
   }
 

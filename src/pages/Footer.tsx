@@ -1,6 +1,5 @@
 import { Icon } from '@iconify/react';
 
-import Tab from '../assets/AppleAir.png';
 function Footer() {
     return (
         <div className="flex flex-col  justify-center items-center w-full lg:h-[550px] h-[1510px] md:h-[1750px] m-auto bg-opacity-90 bg-black">
@@ -16,11 +15,11 @@ function Footer() {
                         About
 
                     </div>
-                    <div className="flex font-bold justify-center  text-blue-400 md:text-xl ">
+                    <div className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 flex font-bold justify-center  text-blue-400 md:text-xl ">
                         XPress
 
                     </div>
-                    <div className="flex font-bold text-3xl justify-center text-blue-400">
+                    <div className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 flex font-bold text-3xl justify-center text-blue-400">
                         Gagets
 
                     </div>
@@ -62,7 +61,7 @@ function Footer() {
                     <div className="flex flex-col items-start items-center m-2 md:text-xl lg:text-base">
                         <div className='flex flex-col  items-start items-center gap-4'>
 
-                            <Icon icon="material-symbols:location-on-outline" width="30px" height="30px" color="#60a5fa" />
+                            <Icon icon="material-symbols:location-on-outline" width="30px" height="30px" color="#7e22ce" />
 
                             <div className='m-0 p-0'>
                                 "No 23, Ramaanayaka <br /> Road,Colombo 07"
@@ -71,7 +70,7 @@ function Footer() {
                         </div>
                         <div className='flex flex-col  items-center gap-4'>
 
-                            <Icon icon="material-symbols:call-outline" width="30px" height="30px" color="#60a5fa" />
+                            <Icon icon="material-symbols:call-outline" width="30px" height="30px" color="#7e22ce" />
 
                             <div>
                                 034-2240334
@@ -79,7 +78,7 @@ function Footer() {
                         </div>
                         <div className='flex flex-col  items-center gap-4'>
 
-                            <Icon icon="material-symbols:mail-outline" width="30px" height="30px" color="#60a5fa" />
+                            <Icon icon="material-symbols:mail-outline" width="30px" height="30px" color="#7e22ce" />
 
                             <div>
                                 XPress@gmail.com
@@ -87,7 +86,7 @@ function Footer() {
                         </div>
                         <div className='flex flex-col  items-center gap-4'>
 
-                            <Icon icon="material-symbols:alarm-outline-rounded" width="30px" height="30px" color="#60a5fa" />
+                            <Icon icon="material-symbols:alarm-outline-rounded" width="30px" height="30px" color="#7e22ce" />
 
                             <div>
                                 Monday-Friday<br />8:00am-5:00pm
@@ -96,12 +95,7 @@ function Footer() {
                         </div>
                     </div>
 
-                    {/* <div className="flex justify-center m-2 mt-4">
-                    <button className="bg-blue-400 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition duration-200">
-                        Contact Now
-                    </button>
-
-                </div> */}
+                   
                 </div>
 
                 <div className="lg:w-1/4 p-4  lg:mr-8  lg:ml-8 rounded-3xl lg:m-0 mt-5 md:w-4/6 m-auto lg:border-0 border-slate-500 border-b-4">

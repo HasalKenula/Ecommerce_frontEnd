@@ -31,29 +31,7 @@ function Category({ handleChange }:props) {
           name="test"
         
         />
-        <Input
-          handleChange={handleChange}
-          value="Playstation"
-          title="Playstation"
-          name="test"
-         
-        />
-
-        <Input
-          handleChange={handleChange}
-          value="Tablets"
-          title="Tablets"
-          name="test"
-         
-        />
-
-        <Input
-          handleChange={handleChange}
-          value="Iphone"
-          title="Iphone"
-          name="test"
-         
-        />
+        
       </div>
     </div>
   );

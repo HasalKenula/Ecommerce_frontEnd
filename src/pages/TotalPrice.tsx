@@ -1,37 +1,30 @@
 import { useEffect, useState } from "react";
-import { useCart} from "../components/CartContext";
+import { useCart } from "../components/CartContext";
 import "./ArtCard.css";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 const ProductPage = () => {
-  const {isAuthenticated,jwtToken}=useAuth();
-  const { cart,removeFromCart } = useCart();
-  const[totalPrice,setTotalPrice]=useState<number>();
+  const { isAuthenticated, jwtToken } = useAuth();
+  const { cart, removeFromCart } = useCart();
+  const [totalPrice, setTotalPrice] = useState<number>();
 
-  const config={
+  const config = {
     headers: {
-        Authorization: `Bearer ${jwtToken}`
+      Authorization: `Bearer ${jwtToken}`
     }
   }
 
   async function addPayement() {
-    await axios.post("http://localhost:8081/orders",{
-      totalPrice:totalPrice
-      
-    },config);
+    await axios.post("http://localhost:8081/orders", {
+      totalPrice: totalPrice
+
+    }, config);
     navigate("/orders");
   }
 
   const navigate = useNavigate();
 
-
-  // const getTotal = () => {
-  //   return cart.reduce((sum, item) => {
-  //     const price = parseFloat(item.price.replace("$", ""));
-  //     return sum + price;
-  //   }, 0).toFixed(2);
-  // };
 
   useEffect(() => {
     const total = cart.reduce((sum, item) => {
@@ -39,11 +32,11 @@ const ProductPage = () => {
       return sum + price;
     }, 0);
     setTotalPrice(parseFloat(total.toFixed(2)));
-  }, [cart,isAuthenticated]);
+  }, [cart, isAuthenticated]);
 
   return (
     <div className="cart-container ">
-      <h1>Your Cart</h1>
+      <div className=" text-2xl font-bold text-center">Your Cart</div>
 
       {cart.length === 0 ? (
         <p>Your cart is empty.</p>
@@ -55,7 +48,7 @@ const ProductPage = () => {
               <th>Image</th>
               <th>Product Name</th>
               <th>Price</th>
-              <th>Action</th> {/* New column */}
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -75,9 +68,8 @@ const ProductPage = () => {
             <tr className="total-row">
               <td colSpan={3}>Total</td>
               <td>
-                  <button onClick={() => addPayement()}>Payement</button>
+                <button onClick={() => addPayement()}>Payement</button>
               </td>
-              {/* <td>${getTotal()}</td> */}
               <td>${totalPrice?.toFixed(2) ?? "0.00"}</td>
             </tr>
           </tbody>

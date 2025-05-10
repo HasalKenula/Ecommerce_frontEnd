@@ -1,4 +1,3 @@
-import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import PlayStation_Controller from '../assets/PlayStation_Controller.jpg'
@@ -8,6 +7,7 @@ import Headphones from '../assets/Headphones.jpg'
 import Tablet from '../assets/Tablets.jpg'
 import Laptop from '../assets/Laptop.jpg'
 
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -15,8 +15,8 @@ import 'swiper/css/navigation';
 
 import './styles.css';
 
-// import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+ // import required modules
+ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default function Auto() {
   return (

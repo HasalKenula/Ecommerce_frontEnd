@@ -1,18 +1,16 @@
-import  { useState} from "react";
-
-
+import { useState } from "react";
 import Sidebar from "./sidebar/Sidebar";
-
 import "./Sidebar/Sidebar.css";
 import Products from "../pages/products/Products";
 import products from "../pages/db/Data";
 import Recommended from "../pages/recommended/Recommended";
-
 import Card from "../components/Cards";
+import NavigationBar from "./NavigationBar";
+
 type Product = {
   img: string;
   title: string;
-  star:string;
+  star: string;
   reviews: number;
   prevPrice: string;
   newPrice: string;
@@ -21,46 +19,28 @@ type Product = {
   company: string;
 };
 
-
 function ProductFilter() {
 
-  
- 
   const [selectedCategory, setSelectedCategory] = useState(null);
 
-  // ----------- Input Filter -----------
-  const [query, setQuery] = useState("");
-
-  const handleInputChange = (event:any) => {
-    setQuery(event.target.value);
-  };
-
-  const filteredItems = products.filter(
-    (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
-  );
-
   // ----------- Radio Filtering -----------
-  const handleChange = (event:any) => {
+  const handleChange = (event: any) => {
     setSelectedCategory(event.target.value);
   };
 
   // ------------ Button Filtering -----------
-  const handleClick = (event:any) => {
+  const handleClick = (event: any) => {
     setSelectedCategory(event.target.value);
   };
 
-  function filteredData(products:any, selected:any, query:any) {
+  function filteredData(products: any, selected: any) {
     let filteredProducts = products;
 
-    // Filtering Input Items
-    if (query) {
-      filteredProducts = filteredItems;
-    }
 
     // Applying selected filter
     if (selected) {
       filteredProducts = filteredProducts.filter(
-        ({ category, color, company, newPrice, title }:Product) =>
+        ({ category, color, company, newPrice, title }: Product) =>
           category === selected ||
           color === selected ||
           company === selected ||
@@ -70,7 +50,7 @@ function ProductFilter() {
     }
 
     return filteredProducts.map(
-      ({ img, title, star, reviews, prevPrice, newPrice }:Product) => (
+      ({ img, title, star, reviews, prevPrice, newPrice }: Product) => (
         <Card
           key={Math.random()}
           img={img}
@@ -84,15 +64,20 @@ function ProductFilter() {
     );
   }
 
-  const result = filteredData(products, selectedCategory, query);
+  const result = filteredData(products, selectedCategory);
 
   return (
-    <div className="content">
-      <Sidebar handleChange={handleChange} />
-      {/* <Navigation query={query} handleInputChange={handleInputChange} /> */}
-      <Recommended handleClick={handleClick} />
-       <Products result={result} /> 
-    </div>
+    <>
+      <div>
+        <NavigationBar />
+      </div>
+      <div className="content">
+        <Sidebar handleChange={handleChange} />
+        <Recommended handleClick={handleClick} />
+        <Products result={result} />
+      </div>
+
+    </>
   );
 }
 
