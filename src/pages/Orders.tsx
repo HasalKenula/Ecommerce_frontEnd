@@ -29,16 +29,16 @@ function Orders() {
 
     return (
         <div className="container mx-auto pt-5 pb-5">
-            <h1 className="text-3xl font-semibold mb-5 text-slate-800">
-                Orders
+            <h1 className="text-6xl font-semibold mb-5 text-slate-800 text-center ">
+                Orders Table
             </h1>
 
             <table className="table-auto w-full">
                 <thead>
                     <tr className="bg-slate-200 text-sm font-medium text-slate-600">
-                        <th className="p-2 w-[50px] text-left">#</th>
-                        <th className="p-2 w-[300px] text-left">Date Time</th>
-                        <th className="p-2 text-left w-[300px] text-right">Total Amount</th>
+                        <th className="p-2 w-[150px] text-left">#</th>
+                        <th className="p-2 w-[600px] text-left">Date Time</th>
+                        <th className="p-2 w-[600px] text-right">Total Amount</th>
                         <th></th>
                     </tr>
                 </thead>

@@ -91,11 +91,12 @@
 
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { useAuth } from "../context/AuthContext";
 
 const NavigationBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-
+  const { logout } = useAuth();
   return (
     <nav className="bg-gradient-to-r from-purple-500 to-pink-500 shadow-md sticky top-0 z-50 font-medium">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
@@ -129,7 +130,7 @@ const NavigationBar = () => {
         <div className="hidden md:flex space-x-8 items-center">
           <a href="#" className="text-gray-700 hover:text-blue-600 transition">Home</a>
           <a href="#" className="text-gray-700 hover:text-blue-600 transition">About</a>
-
+          
           {/* Services Dropdown */}
           <div className="relative group">
             <button className="flex items-center text-gray-700 hover:text-blue-600 transition">
@@ -139,10 +140,12 @@ const NavigationBar = () => {
               <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded-t-xl">Television</a>
               <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-50">Laptops</a>
               <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded-b-xl">Watches</a>
+              
             </div>
           </div>
 
           <a href="#" className="text-gray-700 hover:text-blue-600 transition">Contact</a>
+          <button className="bg-gray-800 text-white px-5 py-2 me-3" onClick={logout}>Logout</button>
         </div>
       </div>
 
@@ -151,6 +154,7 @@ const NavigationBar = () => {
         <div className="md:hidden bg-white border-t border-gray-200 shadow-sm px-4 pb-4">
           <a href="#" className="block py-2 text-gray-700 hover:text-blue-600">Home</a>
           <a href="#" className="block py-2 text-gray-700 hover:text-blue-600">About</a>
+          
 
           {/* Services Mobile Dropdown */}
           <button
@@ -168,6 +172,7 @@ const NavigationBar = () => {
           )}
 
           <a href="#" className="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+          <button className="bg-gray-800 text-white px-5 py-2 me-3" onClick={logout}>Logout</button>
         </div>
       )}
     </nav>

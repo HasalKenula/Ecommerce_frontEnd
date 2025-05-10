@@ -18,6 +18,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import ProfileData from './pages/ProfileData'
 import ProfileTable from './pages/ProfileTable'
+import ContactTable from './pages/ContactTable'
 function App() {
 
 
@@ -43,6 +44,7 @@ function App() {
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/profile" element={<ProfileData/>}/>
             <Route path="/profiletable" element={<ProfileTable/>}/>
+            <Route path="/contactTable" element={<ContactTable/>}/>
           </Route>
           <Route path='/auth/login' element={<Login />} />
           <Route path='/register' element={<Register/>}/>

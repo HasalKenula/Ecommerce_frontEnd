@@ -12,7 +12,7 @@ function ProfileTable() {
         }
        }
 
-    async function loadOrders() {
+    async function loadProfiles() {
         try {
             const response = await axios.get("http://localhost:8081/profile", config);
             setProfile(response.data);
@@ -23,14 +23,14 @@ function ProfileTable() {
 
     useEffect(function () {
         if(isAuthenticated){
-        loadOrders();
+        loadProfiles();
         }
     },[isAuthenticated])
 
     return (
         <div className="container mx-auto pt-5 pb-5">
-            <h1 className="text-3xl font-semibold mb-5 text-slate-800">
-                Profiles
+            <h1 className="text-6xl text-center font-semibold mb-5 text-slate-800">
+                Profiles Table
             </h1>
 
             <table className="table-auto w-full">

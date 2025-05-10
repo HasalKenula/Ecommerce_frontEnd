@@ -1,24 +1,30 @@
-import { useState } from "react";
+import {useEffect, useState } from "react";
 import axios from "axios";
 import NavigationBar from "./NavigationBar";
 import Footer from "./Footer";
-
+import { useAuth } from "../context/AuthContext";
 function Contact() {
-
+    const { isAuthenticated, jwtToken } = useAuth();
 
     const [name, setName] = useState<string>("");
     const [message, setMessage] = useState<string>("");
     const [email, setEmail] = useState<string>("");
     const [subject, setSubjet] = useState<string>("");
 
+    const config = {
+        headers: {
+            Authorization: `Bearer ${jwtToken}`
+        }
+    }
+
 
     async function send() {
-        await axios.post("http://localhost:8000/api/contact", {
+        await axios.post("http://localhost:8081/contact", {
             name: name,
             message: message,
             subject: subject,
             email: email
-        });
+        },config);
         setSubjet("");
         setMessage("");
         setName("");
@@ -26,6 +32,9 @@ function Contact() {
         alert("your contact is successful")
     }
 
+    useEffect(function () {
+
+    }, [isAuthenticated])
 
 
     function handleMessage(event: any) {
@@ -51,7 +60,7 @@ function Contact() {
 
         <div>
 
-<div>
+            <div>
                 <NavigationBar />
             </div>
             <div className="bg-white-300 lg:flex justify-center items-center w-full lg:h-[700px] md:h-[920px] h-[800px] m-auto  aligns-items ">
