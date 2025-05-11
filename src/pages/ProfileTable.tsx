@@ -36,7 +36,7 @@ function ProfileTable() {
             </div>
 
             <div className="container mx-auto pt-5 pb-5">
-                <h1 className="text-6xl text-center font-semibold mb-5 text-slate-800">
+                <h1 className="text-6xl text-center font-semibold mb-5 text-slate-800 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
                     Profiles Table
                 </h1>
 
@@ -55,13 +55,13 @@ function ProfileTable() {
                     <tbody>
                         {profile.map(function (profiles) {
                             return (
-                                <tr className="text-sm font-medium text-slate-600">
-                                    <td className="p-2">{profiles.id}</td>
-                                    <td className="p-2">{profiles.fullName}</td>
-                                    <td className="p-2">{profiles.subName}</td>
-                                    <td className="p-2">{profiles.address}</td>
-                                    <td className="p-2">{profiles.email}</td>
-                                    <td className="p-2 text-right">{profiles.contact}</td>
+                                <tr key={profiles.id} className="text-sm font-medium text-slate-600">
+                                    <td className="p-2 border-b border-slate-300">{profiles.id}</td>
+                                    <td className="p-2 border-b border-slate-300">{profiles.fullName}</td>
+                                    <td className="p-2 border-b border-slate-300">{profiles.subName}</td>
+                                    <td className="p-2 border-b border-slate-300">{profiles.address}</td>
+                                    <td className="p-2 border-b border-slate-300">{profiles.email}</td>
+                                    <td className="p-2 text-right border-b border-slate-300">{profiles.contact}</td>
 
                                 </tr>
                             )

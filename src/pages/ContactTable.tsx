@@ -36,7 +36,7 @@ function ContactTable() {
                 <NavigationBar />
             </div>
             <div className="container mx-auto pt-5 pb-5">
-                <h1 className="text-6xl text-center font-semibold mb-5 text-slate-800">
+                <h1 className="text-6xl text-center font-semibold mb-5 text-slate-800 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
                     Contacts Table
                 </h1>
 
@@ -54,12 +54,12 @@ function ContactTable() {
                     <tbody>
                         {contact.map(function (contacts) {
                             return (
-                                <tr className="text-sm font-medium text-slate-600">
-                                    <td className="p-2">{contacts.id}</td>
-                                    <td className="p-2">{contacts.name}</td>
-                                    <td className="p-2">{contacts.message}</td>
-                                    <td className="p-2">{contacts.subject}</td>
-                                    <td className="p-2 text-right">{contacts.email}</td>
+                                <tr key={contacts.id} className="text-sm font-medium text-slate-600">
+                                    <td className="p-2 border-b border-slate-300">{contacts.id}</td>
+                                    <td className="p-2 border-b border-slate-300">{contacts.name}</td>
+                                    <td className="p-2 border-b border-slate-300">{contacts.message}</td>
+                                    <td className="p-2 border-b border-slate-300">{contacts.subject}</td>
+                                    <td className="p-2 text-right border-b border-slate-300">{contacts.email}</td>
 
                                 </tr>
                             )

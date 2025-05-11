@@ -39,21 +39,21 @@ function Registration() {
 
 
     return (
-        <div className="p-10 h-screen bg-cover bg-center bg-fixed">
+        <div className="min-h-screen w-full p-10 h-screen bg-cover bg-center bg-fixed bg-gradient-to-r from-purple-500 to-pink-500  ">
 
-            <div className="flex items-center">
-                <span className="text-white text-xl font-bold">Silvester Grocery Store</span>
+            <div style={{ textShadow: '2px 2px 4px rgba(250, 244, 244, 0.17)' }} className="text-center  text-6xl font-bold  md:pb-24 pb-8  text-transparent bg-clip-text bg-gradient-to-r from-pink-700 to-purple-700">
+                XPress Gagets
             </div>
 
             <div className="max-w-[600px] p-8 shadow-xl rounded-lg mx-auto">
                 <div className="text-center mb-5">
-                    <h1 className="text-2xl font-semibold">Register</h1>
+                    <h1 className="text-2xl font-semibold text-white">Register</h1>
 
                 </div>
 
                 <form onSubmit={submit}>
                     <div className="mb-4">
-                        <label className="block mb-1">Username</label>
+                        <label className="block mb-1 text-white">Username</label>
                         <input type="text" onChange={function (event) {
                             setUserName(event.target.value);
                             setError("");
@@ -62,7 +62,7 @@ function Registration() {
                     </div>
 
                     <div className="mb-4">
-                        <label className="block mb-1">Password</label>
+                        <label className="block mb-1 text-white">Password</label>
                         <input type="password" onChange={function (event) {
                             setUserPassword(event.target.value);
                             setError("");

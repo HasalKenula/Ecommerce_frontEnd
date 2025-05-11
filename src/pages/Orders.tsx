@@ -28,14 +28,14 @@ function Orders() {
             loadOrders();
         }
     }, [isAuthenticated])
-    //key={category.id}
+    
     return (
         <div>
             <div>
                 <NavigationBar />
             </div>
             <div className="container mx-auto pt-5 pb-5">
-                <h1 className="text-6xl font-semibold mb-5 text-slate-800 text-center ">
+                <h1 className="text-6xl font-semibold mb-5 text-slate-800 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
                     Orders Table
                 </h1>
 
@@ -51,10 +51,10 @@ function Orders() {
                     <tbody>
                         {orders.map(function (order) {
                             return (
-                                <tr className="text-sm font-medium text-slate-600">
-                                    <td className="p-2">{order.id}</td>
-                                    <td className="p-2">{order.orderDateTime.toLocaleString()}</td>
-                                    <td className="p-2 text-right">{order.totalPrice}</td>
+                                <tr key={order.id} className="text-sm font-medium text-slate-600">
+                                    <td className="p-2 border-b border-slate-300">{order.id}</td>
+                                    <td className="p-2 border-b border-slate-300">{order.orderDateTime.toLocaleString()}</td>
+                                    <td className="p-2 text-right border-b border-slate-300">{order.totalPrice}</td>
                                 </tr>
                             )
                         })}

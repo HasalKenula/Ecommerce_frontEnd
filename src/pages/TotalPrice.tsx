@@ -61,14 +61,14 @@ const ProductPage = () => {
                 <td>{item.name}</td>
                 <td>{item.price}</td>
                 <td>
-                  <button onClick={() => removeFromCart(index)}>Delete</button>
+                  <button onClick={() => removeFromCart(index)} className="m-2 px-5 py-2 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:bg-blue-700 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">Delete</button>
                 </td>
               </tr>
             ))}
             <tr className="total-row">
               <td colSpan={3}>Total</td>
               <td>
-                <button onClick={() => addPayement()}>Payement</button>
+                <button onClick={() => addPayement()} className="m-2 px-5 py-2 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:bg-blue-700 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">Payement</button>
               </td>
               <td>${totalPrice?.toFixed(2) ?? "0.00"}</td>
             </tr>
