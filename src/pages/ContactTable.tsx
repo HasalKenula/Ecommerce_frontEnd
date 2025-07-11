@@ -2,12 +2,13 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import ContactType from "../type/ContactType";
 import { useAuth } from "../context/AuthContext";
-import NavigationBar from "./NavigationBar";
+import AdminNavbar from "./AdminNavbar";
 import Footer from "./Footer";
+ 
 function ContactTable() {
     const { isAuthenticated, jwtToken } = useAuth();
     const [contact, setContact] = useState<ContactType[]>([]);
-
+    const { logout } = useAuth();
     const config = {
         headers: {
             Authorization: `Bearer ${jwtToken}`
@@ -33,7 +34,11 @@ function ContactTable() {
         <>
 
             <div>
-                <NavigationBar />
+                
+               <div>
+                 <AdminNavbar logout={logout} />
+               </div>
+
             </div>
             <div className="container mx-auto pt-5 pb-5">
                 <h1 className="text-6xl text-center font-semibold mb-5 text-slate-800 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
@@ -48,7 +53,7 @@ function ContactTable() {
                             <th className="p-2 w-[300px] text-left">Message</th>
                             <th className="p-2 w-[300px] text-left">Subject</th>
                             <th className="p-2 text-left w-[300px] text-right">Email</th>
-                            <th></th>
+                            
                         </tr>
                     </thead>
                     <tbody>

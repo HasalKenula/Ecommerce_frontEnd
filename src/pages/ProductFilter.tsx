@@ -68,7 +68,7 @@ function ProductFilter() {
 
   return (
     <>
-      <div>
+      <div className="sticky top-0 z-50">
         <NavigationBar />
       </div>
       <div className="content">

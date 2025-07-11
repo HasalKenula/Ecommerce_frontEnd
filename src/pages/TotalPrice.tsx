@@ -20,7 +20,8 @@ const ProductPage = () => {
       totalPrice: totalPrice
 
     }, config);
-    navigate("/orders");
+    alert("Your payment is successful");
+    navigate("/");
   }
 
   const navigate = useNavigate();

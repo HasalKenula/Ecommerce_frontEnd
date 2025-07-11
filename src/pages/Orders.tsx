@@ -2,12 +2,12 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import OrderType from "../type/OrdersType";
 import { useAuth } from "../context/AuthContext";
-import NavigationBar from "./NavigationBar";
 import Footer from "./Footer";
+import AdminNavbar from "./AdminNavbar";
 function Orders() {
     const { isAuthenticated, jwtToken } = useAuth();
     const [orders, setOrders] = useState<OrderType[]>([]);
-
+    const { logout } = useAuth();
     const config = {
         headers: {
             Authorization: `Bearer ${jwtToken}`
@@ -24,7 +24,7 @@ function Orders() {
     }
 
     useEffect(function () {
-        if (isAuthenticated) {
+        if (isAuthenticated ) {
             loadOrders();
         }
     }, [isAuthenticated])
@@ -32,19 +32,18 @@ function Orders() {
     return (
         <div>
             <div>
-                <NavigationBar />
+                 <AdminNavbar logout={logout} />
             </div>
             <div className="container mx-auto pt-5 pb-5">
                 <h1 className="text-6xl font-semibold mb-5 text-slate-800 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
                     Orders Table
                 </h1>
-
                 <table className="table-auto w-full">
                     <thead>
                         <tr className="bg-slate-200 text-sm font-medium text-slate-600">
                             <th className="p-2 w-[150px] text-left">#</th>
                             <th className="p-2 w-[600px] text-left">Date Time</th>
-                            <th className="p-2 w-[600px] text-right">Total Amount</th>
+                            <th className="p-2 w-[600px] text-right">Total Amount(Rs.)</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -60,7 +59,7 @@ function Orders() {
                         })}
                     </tbody>
                 </table>
-            </div>
+            </div>  
             <div>
                 <Footer />
             </div>
@@ -69,3 +68,4 @@ function Orders() {
 }
 
 export default Orders;
+

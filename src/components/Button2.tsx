@@ -1,5 +1,5 @@
 type ButtonProps = {
-    onClickHandler: (event: React.MouseEvent<HTMLButtonElement>) => void; // updated to match the event type
+    onClickHandler: (event: React.MouseEvent<HTMLButtonElement>) => void; 
     value: string;
     title: string;
   };

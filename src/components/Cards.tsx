@@ -8,7 +8,7 @@ type CardProps = {
     star: string; 
     reviews: number; 
     prevPrice: string; 
-    newPrice: string; // New price (string, for currency formatting like "$80")
+    newPrice: string; 
   };
 
 const Card = ({ img, title, star, reviews, prevPrice, newPrice }:CardProps) => {

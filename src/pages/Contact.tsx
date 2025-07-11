@@ -60,7 +60,7 @@ function Contact() {
 
         <div>
 
-            <div>
+            <div className="sticky top-0 z-50">
                 <NavigationBar />
             </div>
             <div className="bg-white-300 lg:flex justify-center items-center w-full lg:h-[700px] md:h-[920px] h-[800px] m-auto  aligns-items ">

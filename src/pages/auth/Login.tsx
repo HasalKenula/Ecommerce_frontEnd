@@ -14,7 +14,8 @@ function Login() {
     async function submit(event: any){
         event.preventDefault();
         if(username === "" || password === ""){
-            setError("Username and password are reqired")
+            setError("Username and password are reqired");
+            return;
         }
 
         const data ={
@@ -22,13 +23,21 @@ function Login() {
             password: password
         }
 
-        try{
-            const response = await axios.post("http://localhost:8081/auth/login",data);
-            //console.log(response);
-            login(response.data);
-            navigate("/");
-        }catch(error){
-            setError("There was an error login");
+         try {
+            const response = await axios.post("http://localhost:8081/auth/login", data);
+
+            const token = response.data.token;
+            const returnedUsername = response.data.username;
+
+            login({ token, username: returnedUsername });  
+            
+            if (returnedUsername === "admin") {
+                navigate("/Orders"); 
+            } else {
+                navigate("/"); 
+            }
+        } catch (error) {
+            setError("There was an error during login");
         }
     }
     return (

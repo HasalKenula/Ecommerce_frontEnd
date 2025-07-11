@@ -3,7 +3,7 @@ type InputProps = {
     value: string | number;
     title: string;
     name: string;
-    color?: string; // Optional because not all inputs might need a color
+    color?: string; 
   };
 
 const Input = ({ handleChange, value, title, name, color }:InputProps) => {

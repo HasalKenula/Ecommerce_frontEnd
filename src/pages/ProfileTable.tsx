@@ -2,12 +2,13 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import ProfileType from "../type/ProfileType";
 import { useAuth } from "../context/AuthContext";
-import NavigationBar from "./NavigationBar";
 import Footer from "./Footer";
+import AdminNavbar from "./AdminNavbar";
+
 function ProfileTable() {
     const { isAuthenticated, jwtToken } = useAuth();
     const [profile, setProfile] = useState<ProfileType[]>([]);
-
+    const { logout } = useAuth();
     const config = {
         headers: {
             Authorization: `Bearer ${jwtToken}`
@@ -32,9 +33,8 @@ function ProfileTable() {
     return (
         <>
             <div>
-                <NavigationBar />
+                <AdminNavbar logout={logout} />
             </div>
-
             <div className="container mx-auto pt-5 pb-5">
                 <h1 className="text-6xl text-center font-semibold mb-5 text-slate-800 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
                     Profiles Table

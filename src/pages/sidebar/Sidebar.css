@@ -21,13 +21,13 @@
   
   @media (max-width: 768px) {
     .sidebar {
-      display: none; /* Completely hide the sidebar on mobile */
+      display: none; 
       width: 0%;
     }
   
-    /* Optional: Ensure the content uses the full width of the screen when sidebar is hidden */
+    
     .content {
-      margin-left: 0; /* Adjust content margin to take full width */
+      margin-left: 0; 
     }
   }
 
