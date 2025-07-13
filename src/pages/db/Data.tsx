@@ -9,7 +9,7 @@ import im6 from "../../assets/Tablet2.png";
 const Data = [
   {
     img:im1 ,
-    title: "Watches",
+    title: "Apple Watch Ultra 2",
     star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
@@ -20,7 +20,7 @@ const Data = [
   },
   {
     img: im2,
-    title: "Headpones",
+    title: "AirPods Max",
     star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
@@ -32,7 +32,7 @@ const Data = [
 
   {
     img:im3,
-    title: "Iphone",
+    title: "Iphone 16",
     star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
@@ -43,7 +43,7 @@ const Data = [
   },
   {
     img: im4,
-    title: "Laptops",
+    title: "MacBook Air",
     star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
@@ -54,7 +54,7 @@ const Data = [
   },
   {
     img: im5,
-    title: "Playstation",
+    title: "Playstation 5",
     star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
@@ -65,7 +65,7 @@ const Data = [
   },
   {
     img: im6,
-    title: "Tablets",
+    title: "iPad Air (M2, 2024)",
     star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",

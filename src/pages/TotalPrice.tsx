@@ -4,11 +4,12 @@ import "./ArtCard.css";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+
 const ProductPage = () => {
   const { isAuthenticated, jwtToken } = useAuth();
   const { cart, removeFromCart } = useCart();
   const [totalPrice, setTotalPrice] = useState<number>();
-
+  const { username } = useAuth(); 
   const config = {
     headers: {
       Authorization: `Bearer ${jwtToken}`
@@ -17,7 +18,9 @@ const ProductPage = () => {
 
   async function addPayement() {
     await axios.post("http://localhost:8081/orders", {
-      totalPrice: totalPrice
+      totalPrice: totalPrice,
+      productNames: cart.map(item => item.name).join(", "), 
+      username:username
 
     }, config);
     alert("Your payment is successful");
@@ -66,6 +69,14 @@ const ProductPage = () => {
                 </td>
               </tr>
             ))}
+
+             <tr className="product-row">
+              <td colSpan={3}>Product names</td>
+              <td colSpan={2}>
+                ({cart.map(item => item.name).join(", ")})
+              </td>
+            </tr>
+
             <tr className="total-row">
               <td colSpan={3}>Total</td>
               <td>

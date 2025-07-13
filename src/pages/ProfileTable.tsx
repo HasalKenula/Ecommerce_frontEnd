@@ -24,6 +24,15 @@ function ProfileTable() {
         }
     }
 
+    async function profileDelete(profileId:number){
+        try {
+            await axios.delete(`http://localhost:8081/profile/${profileId}`, config);
+            loadProfiles();
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     useEffect(function () {
         if (isAuthenticated) {
             loadProfiles();
@@ -45,10 +54,11 @@ function ProfileTable() {
                         <tr className="bg-slate-200 text-sm font-medium text-slate-600">
                             <th className="p-2 w-[50px] text-left">#</th>
                             <th className="p-2 w-[300px] text-left">fullName</th>
-                            <th className="p-2 w-[300px] text-left">subName</th>
+                            <th className="p-2 w-[300px] text-left">UserName</th>
                             <th className="p-2 w-[300px] text-left">address</th>
                             <th className="p-2 w-[300px] text-left">email</th>
-                            <th className="p-2 text-left w-[300px] text-right">contact</th>
+                            <th className="p-2 w-[300px] text-left">contact</th>
+                            <th className="p-2 w-[70px] text-right">Delete</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -61,7 +71,8 @@ function ProfileTable() {
                                     <td className="p-2 border-b border-slate-300">{profiles.subName}</td>
                                     <td className="p-2 border-b border-slate-300">{profiles.address}</td>
                                     <td className="p-2 border-b border-slate-300">{profiles.email}</td>
-                                    <td className="p-2 text-right border-b border-slate-300">{profiles.contact}</td>
+                                    <td className="p-2 border-b border-slate-300">{profiles.contact}</td>
+                                    <td className="p-2 rounded-lg text-white bg-slate-800 text-right border-b border-slate-300"><button type="button" onClick={()=>profileDelete(profiles.id)}>Delete</button></td>
 
                                 </tr>
                             )

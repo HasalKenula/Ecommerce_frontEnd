@@ -24,6 +24,15 @@ function ContactTable() {
         }
     }
 
+    async function contactDelete(contactId:number){
+        try {
+            await axios.delete(`http://localhost:8081/contact/${contactId}`, config);
+            loadContacts();
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     useEffect(function () {
         if (isAuthenticated) {
             loadContacts();
@@ -52,7 +61,8 @@ function ContactTable() {
                             <th className="p-2 w-[300px] text-left">Name</th>
                             <th className="p-2 w-[300px] text-left">Message</th>
                             <th className="p-2 w-[300px] text-left">Subject</th>
-                            <th className="p-2 text-left w-[300px] text-right">Email</th>
+                            <th className="p-2 text-left w-[300px]">Email</th>
+                            <th className="p-2 w-[50px] text-right">Delete</th>
                             
                         </tr>
                     </thead>
@@ -64,7 +74,8 @@ function ContactTable() {
                                     <td className="p-2 border-b border-slate-300">{contacts.name}</td>
                                     <td className="p-2 border-b border-slate-300">{contacts.message}</td>
                                     <td className="p-2 border-b border-slate-300">{contacts.subject}</td>
-                                    <td className="p-2 text-right border-b border-slate-300">{contacts.email}</td>
+                                    <td className="p-2 border-b border-slate-300">{contacts.email}</td>
+                                    <td className="p-2 rounded-lg text-white bg-slate-800 text-right border-b border-slate-300"><button type="button" onClick={()=>contactDelete(contacts.id)}>Delete</button></td>
 
                                 </tr>
                             )

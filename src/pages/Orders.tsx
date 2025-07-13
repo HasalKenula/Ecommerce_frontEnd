@@ -23,6 +23,15 @@ function Orders() {
         }
     }
 
+    async function oredrDelete(orderId:number){
+        try {
+            await axios.delete(`http://localhost:8081/orders/${orderId}`, config);
+            loadOrders();
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     useEffect(function () {
         if (isAuthenticated ) {
             loadOrders();
@@ -42,8 +51,11 @@ function Orders() {
                     <thead>
                         <tr className="bg-slate-200 text-sm font-medium text-slate-600">
                             <th className="p-2 w-[150px] text-left">#</th>
+                            <th className="p-2 w-[150px] text-left">UserName</th>
                             <th className="p-2 w-[600px] text-left">Date Time</th>
-                            <th className="p-2 w-[600px] text-right">Total Amount(Rs.)</th>
+                            <th className="p-2 w-[550px] text-left">Product Names</th> 
+                            <th className="p-2 w-[600px] text-left">Total Amount($)</th>
+                            <th className="p-2 w-[70px] text-right">Delete</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -52,8 +64,13 @@ function Orders() {
                             return (
                                 <tr key={order.id} className="text-sm font-medium text-slate-600">
                                     <td className="p-2 border-b border-slate-300">{order.id}</td>
+                                    <td className="p-2 border-b border-slate-300">{order.username? order.username:"No User"}</td>
                                     <td className="p-2 border-b border-slate-300">{order.orderDateTime.toLocaleString()}</td>
-                                    <td className="p-2 text-right border-b border-slate-300">{order.totalPrice}</td>
+                                    <td className="p-2 border-b border-slate-300">
+                                        {order.productNames?.trim() ? order.productNames : "No products"}
+                                    </td>
+                                    <td className="p-2 border-b border-slate-300">{order.totalPrice}</td>
+                                    <td className="p-2 rounded-lg text-white bg-slate-800 text-right border-b border-slate-300"><button type="button" onClick={()=>oredrDelete(order.id)}>Delete</button></td>
                                 </tr>
                             )
                         })}
