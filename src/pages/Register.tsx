@@ -79,7 +79,7 @@ function Registration() {
 
                     <div className="mb-3">
 
-                        <Link to="/auth/login" className="w-full rounded-lg px-4 py-2 bg-gray-800 text-white hover:bg-gray-950 ">Back</Link>
+                        <Link to="/auth/login" className="w-full rounded-lg px-4 py-2 bg-gray-800 text-white hover:bg-gray-950 ">Login</Link>
 
                     </div>
                 </form>
